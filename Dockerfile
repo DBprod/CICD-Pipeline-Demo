@@ -5,4 +5,4 @@ RUN pip install --upgrade pip
 RUN pip install -r /src/requirements.txt
 COPY app.py /src
 COPY src /src/src
-CMD python /src/app.py
+CMD ["python",  "/src/app.py"]

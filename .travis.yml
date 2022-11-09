@@ -1,5 +1,3 @@
-sudo: required
-
 services:
   - docker
 
@@ -9,4 +7,4 @@ script:
   - python -m pytest -v
 
 after_success:
-  - ./.travis/deploy_dockerhub.sh
+  - sh .travis/deploy_dockerhub.sh
