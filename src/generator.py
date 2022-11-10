@@ -1,26 +1,26 @@
 from __future__ import print_function
 import random
 
-buzz = ('continuous testing', 'continuous integration',
-    'continuous deployment', 'continuous improvement', 'devops')
-adjectives = ('complete', 'modern', 'self-service', 'integrated', 'end-to-end')
-adverbs = ('remarkably', 'enormously', 'substantially', 'significantly',
-    'seriously')
-verbs = ('accelerates', 'improves', 'enhances', 'revamps', 'boosts')
 
-def sample(l, n = 1):
-    result = random.sample(l, n)
-    if n == 1:
-        return result[0]
-    return result
-
-# Generate buzz
-def generate_buzz():
-    buzz_terms = sample(buzz, 2)
-    phrase = ' '.join([sample(adjectives), buzz_terms[0], sample(adverbs),
-        sample(verbs), buzz_terms[1]])
-    return phrase.title()
+def fibo(n):
+    # Check if input is 0 then it will
+    # print incorrect input
+    if n < 0:
+        print("Incorrect input")
+ 
+    # Check if n is 0
+    # then it will return 0
+    elif n == 0:
+        return 0
+ 
+    # Check if n is 1,2
+    # it will return 1
+    elif n == 1 or n == 2:
+        return 1
+ 
+    else:
+        return fibo(n-1) + fibo(n-2)
 
 if __name__ == "__main__":
-    print(generate_buzz())
+    print(fibo(9))
     #HELLP

@@ -2,19 +2,14 @@ import unittest
 
 from src import generator
 
-def test_sample_single_word():
-    l = ('foo', 'bar', 'foobar')
-    word = generator.sample(l)
-    assert word in l
 
-def test_sample_multiple_words():
-    l = ('foo', 'bar', 'foobar')
-    words = generator.sample(l, 2)
-    assert len(words) == 2
-    assert words[0] in l
-    assert words[1] in l
-    assert words[0] is not words[1]
+def test_small_n():
+    fib_of_9 = 34
+    fib_n = generator.fibo(9)
+    assert fib_of_9 == fib_n
+    
 
-def test_generate_buzz_of_at_least_five_words():
-    phrase = generator.generate_buzz()
-    assert len(phrase.split()) >= 5
+def test_large_n():
+    fib_of_24 = 46368
+    fib_n = generator.fibo(24)
+    assert fib_of_24 == fib_n

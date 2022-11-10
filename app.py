@@ -6,9 +6,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def generate_buzz():
-    page = '<html><body><h1>'
-    page += generator.generate_buzz()
-    page += " ALSO DANIEL IS A BITCH"
+    page = '<html><body><h1> For N=9: \n'
+    page += str(generator.fibo(24))
     page += '</h1></body></html>'
     return page
 
