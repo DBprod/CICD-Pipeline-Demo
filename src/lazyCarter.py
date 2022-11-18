@@ -5,5 +5,3 @@ def lazyCarterSum(n):
         sum += (i * (i + 1)) // 2 + 1
         i += 1
     return int(sum)
-
-print(lazyCarterSum(2))

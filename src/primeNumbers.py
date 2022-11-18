@@ -21,4 +21,3 @@ def sumOfPrimes(n):
             totalSum += i
     return totalSum
 		
-print(sumOfPrimes(30))
