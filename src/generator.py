@@ -1,6 +1,9 @@
 from __future__ import print_function
-from src import fibonacci as fibo
-from src import magic_squares as magic
+import fibonacci as fibo
+import magic_squares as magic
+import lazyCarter
+import magic_squares
+import primeNumbers
 import random as r
 
 
@@ -22,13 +25,13 @@ def generate_title_sum(rand_series, n):
         t = 'Sum of Magic Square Series is:'
         sum = magic.magic_square(n)
     elif rand_series == 2:
-        t = 'Sum of Look and Say Sequence is:'
-        sum = fibo.fibo(n)
+        t = 'Sum of Prime Number Sequence is:'
+        sum = primeNumbers.sumOfPrimes(n)
     elif rand_series == 3:
         t = "Sum of Lazy Caterer's Sequence is:"
-        sum = fibo.fibo(n)
+        sum = lazyCarter.lazyCarterSum(n)
     elif rand_series == 4:
         t = 'Sum of Square Numbers Series is:'
-        sum = fibo.fibo(n)
+        sum = magic_squares.magic_square(n)
     
     return sum, t
