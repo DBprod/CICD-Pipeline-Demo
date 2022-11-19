@@ -1,14 +1,15 @@
 import os
 from flask import Flask
-from src import generator
 import random as r
+from src import generator
 app = Flask(__name__)
 
 @app.route("/")
-def generate_fibo():
+def generate():
     N = r.randint(1,50)
-    html = '<html><body><h1> For N='+str(N)+', the Fibonacci Sum is: '
-    html += str(generator.fibo(N))
+    sum, title = generator.generate_random_series(N) 
+    html = '<html><body><h1> For N='+str(N)+', '+title
+    html += str(sum)
     html += '</h1></body></html>'
     return html
 

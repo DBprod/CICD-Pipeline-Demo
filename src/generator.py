@@ -1,26 +1,36 @@
-from __future__ import print_function
+from src import fibonacci 
+from src import magic_squares 
+from src import lazyCarter
+from src import primeNumbers
+from src import squareSeries
+import random as r
 
 
+def generate_random_series(n):
+    # Initialize a list of the series
+    # index's 0 = fibo, 1 = magic, 2 = prime, 3= lazy, 4 =square_num 
+    # select randomly which function to display
+    rand_series =  r.randint(0,4)
+    return generate_title_sum(rand_series, n)
 
-def fibo(n):
-    # Check if input is 0 then it will
-    # print incorrect input
-    if n < 0:
-        print("Incorrect input")
- 
-    # Check if n is 0
-    # then it will return 0
-    elif n == 0:
-        return 0
- 
-    # Check if n is 1,2
-    # it will return 1
-    elif n == 1 or n == 2:
-        return 1
- 
+
+def generate_title_sum(rand_series, n):
+    t = ''
+    sum = 0
+    if rand_series == 0:
+        t = 'Fibonacci Sum is:'
+        sum = fibonacci.fibo(n)
+    elif rand_series == 1:
+        t = 'Sum of Magic Square Series is:'
+        sum = magic_squares.magic_square(n)
+    elif rand_series == 2:
+        t = 'Sum of Prime Number Sequence is:'
+        sum = primeNumbers.sumOfPrimes(n)
+    elif rand_series == 3:
+        t = "Sum of Lazy Caterer's Sequence is:"
+        sum = lazyCarter.lazyCarterSum(n)
     else:
-        return fibo(n-1) + fibo(n-2)
-
-if __name__ == "__main__":
-    print(fibo(9))
-    #HELLP
+        t = 'Sum of Square Numbers Series is:'
+        sum = squareSeries.squareSeries(n)
+    
+    return sum, t
