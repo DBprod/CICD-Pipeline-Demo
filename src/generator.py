@@ -29,7 +29,7 @@ def generate_title_sum(rand_series, n):
     elif rand_series == 3:
         t = "Sum of Lazy Caterer's Sequence is:"
         sum = lazyCarter.lazyCarterSum(n)
-    elif rand_series == 4:
+    else:
         t = 'Sum of Square Numbers Series is:'
         sum = squareSeries.squareSeries(n)
     

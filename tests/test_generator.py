@@ -1,6 +1,3 @@
-import unittest
-
-
 from src import fibonacci
 from src import magic_squares
 from src import lazyCarter
