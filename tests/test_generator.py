@@ -47,7 +47,7 @@ def test_4_n_lazy():
     assert lazy_of_3 == lazy_n
 
 # ****************************
-#   MAGIC SQUARE TESTS
+#    MAGIC SQUARE TESTS
 # ****************************
 def test_49_n_square():
     sum_square_of_49 = 1274
