@@ -60,7 +60,7 @@ def test_20_n_square():
     assert sum_square_of_20 == sum_square_n
 
 # ****************************
-#   PRIME NUMBER TESTS
+#   PRIME NUMBER  TESTS
 # ****************************
 def test_30_n_PRIME():
     sum_prime_of_30 = 129
