@@ -3,9 +3,10 @@ from src import magic_squares
 from src import lazyCarter
 from src import magic_squares
 from src import primeNumbers
+from src import generator
 
 # ****************************
-#   fIBONACCI TESTS
+#   FIBONACCI TESTS
 # ****************************
 def test_small_n_fib():
     fib_of_9 = 34
@@ -68,3 +69,16 @@ def test_49_n_PRIME():
     sum_prime_of_49 = 328
     sum_prime_n = primeNumbers.sumOfPrimes(49)
     assert sum_prime_of_49 == sum_prime_n
+
+# ****************************
+#   INTEGRATION TESTS
+# ****************************
+def test_49_n_generator():
+    N = 49
+    gen = generator.generate_random_series(N) 
+    assert gen is not None
+
+def test_1_n_generator():
+    N = 1
+    gen = generator.generate_random_series(N) 
+    assert gen is not None

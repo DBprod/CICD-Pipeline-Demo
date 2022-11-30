@@ -3,11 +3,11 @@ def sumOfPrimes(n):
         return 1
     prime = [True] * (n + 1) 
     p = 2
-    while p * p <= n:
+    while p * p < n+1:
         if prime[p] == True:
             i = p * 2  
 
-            while i <= n:
+            while i < n+1:
                 prime[i] = False
                 i += p
         p += 1
